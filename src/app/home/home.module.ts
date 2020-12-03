@@ -5,6 +5,8 @@ import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
+import {HttpClientModule} from '@angular/common/http';
+import {IonicImageLoaderModule} from 'ionic-image-loader-v5';
 
 
 @NgModule({
@@ -12,7 +14,9 @@ import { HomePageRoutingModule } from './home-routing.module';
     CommonModule,
     FormsModule,
     IonicModule,
-    HomePageRoutingModule
+    HomePageRoutingModule,
+    HttpClientModule,
+    IonicImageLoaderModule
   ],
   declarations: [HomePage]
 })
