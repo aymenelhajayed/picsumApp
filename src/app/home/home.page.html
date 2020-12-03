@@ -1,5 +1,5 @@
 <ion-header [translucent]="true">
-    <ion-toolbar>
+    <ion-toolbar color="primary">
         <ion-title>
             Picsum photos
         </ion-title>
@@ -19,11 +19,14 @@
             </ion-list-header>
 
             <ion-item *ngFor="let image of imagesList">
-                <ion-avatar slot="start">
-                    <img alt="{{image.author}}" src="{{image.download_url}}">
-                </ion-avatar>
+                <ion-thumbnail slot="start">
+                    <img-loader src="{{image.download_url}}"></img-loader>
+                </ion-thumbnail>
                 <ion-label>
                     <h2>{{image.author}}</h2>
+                    <ion-button expand="block" [routerLink]="'/detail/'+image.id">
+                        Details
+                    </ion-button>
                 </ion-label>
             </ion-item>
         </ion-list>

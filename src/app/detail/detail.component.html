@@ -1,0 +1,29 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/home"></ion-back-button>
+        </ion-buttons>
+        <ion-title>Details</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding *ngIf="detailImage">
+    <ion-list-header>{{detailImage.author}}</ion-list-header>
+    <ion-item>
+        <ion-img [src]="detailImage.download_url"></ion-img>
+    </ion-item>
+    <ion-item>
+        <ion-label>Image ID:</ion-label>
+        <ion-note slot="end">{{detailImage.id}}</ion-note>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>Width:</ion-label>
+        <ion-note slot="end" color="secondary">{{detailImage.width}}px</ion-note>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>Height:</ion-label>
+        <ion-note slot="end" color="secondary">{{detailImage.height}}px</ion-note>
+    </ion-item>
+</ion-content>
